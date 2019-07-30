@@ -8,13 +8,13 @@ IRIS provides us with anti **login** CSRF attack mitigation, however this is not
 ## Definition
 See the following link from OWASP for the definition of a CSRF attack:
 
-https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)
+[https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))
 
 ## Methodology
 
 The method shown in this repo for mitigating these attacks is currently not proactive, but a minimum. By proactive, I mean that it is possible in the future for attackers to coerce a browser into creating arbituary custom headers and values. Because this is not currently possible, the mere presence of a custom header is enough to mitigate this risk. See the following for further explanation:
 
-https://security.stackexchange.com/questions/23371/csrf-protection-with-custom-headers-and-without-validating-token
+[https://security.stackexchange.com/questions/23371/csrf-protection-with-custom-headers-and-without-validating-token](https://security.stackexchange.com/questions/23371/csrf-protection-with-custom-headers-and-without-validating-token)
 
 ## Example
 
@@ -55,4 +55,4 @@ If the header isn't there or it has no value, the request is dropped.
 
 This method needs to move towards proactivity which means a CSRF token will need to be sent back and forth from client/server and validated. We're looking to utilize the session cookie information so that we don't reinvent the wheel with how CSP works. Here's more information on where this should be heading:
 
-https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.md
+[https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.md](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.md)
